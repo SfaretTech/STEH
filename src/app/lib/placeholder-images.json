@@ -1,0 +1,44 @@
+{
+  "aboutImage": {
+    "src": "/about-image.png",
+    "width": 800,
+    "height": 600,
+    "alt": "Students collaborating on tech projects",
+    "aiHint": "students collaboration"
+  },
+  "heroImage": {
+    "src": "/hero-bg.jpg",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Modern tech education background",
+    "aiHint": "tech education"
+  },
+  "teamMember1": {
+    "src": "/dikepaul.png",
+    "width": 400,
+    "height": 400,
+    "alt": "Dike Paul - Founder & Lead Instructor",
+    "aiHint": "professional man"
+  },
+  "teamMember2": {
+    "src": "/team-2.jpg",
+    "width": 400,
+    "height": 400,
+    "alt": "Fatima Bello - Head of Programs",
+    "aiHint": "professional woman"
+  },
+  "teamMember3": {
+    "src": "/team-1.jpg",
+    "width": 400,
+    "height": 400,
+    "alt": "Chidi Nwosu - Senior Developer",
+    "aiHint": "professional man"
+  },
+  "microsoftCourseImage": {
+    "src": "/course-microsoft.jpg",
+    "width": 1080,
+    "height": 720,
+    "alt": "Microsoft Productivity Suite Training",
+    "aiHint": "office productivity"
+  }
+}

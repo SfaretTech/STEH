@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Mode: Clean, slightly tinted background for depth */
+    --background: 280 40% 99%;
+    --foreground: 280 50% 5%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 280 50% 5%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 280 50% 5%;
+
+    /* Brand Primary: Professional Purple */
+    --primary: 283 47% 53%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 280 20% 96%;
+    --secondary-foreground: 280 40% 15%;
+
+    --muted: 280 20% 94%;
+    --muted-foreground: 280 15% 45%;
+
+    /* Brand Accent: High-Tech Cyan */
+    --accent: 197 90% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 280 15% 90%;
+    --input: 280 15% 90%;
+    --ring: 283 47% 53%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    /* Dark Mode: Deep Charcoal-Purple for a premium look */
+    --background: 280 45% 4%;
+    --foreground: 280 20% 98%;
+
+    --card: 280 40% 7%;
+    --card-foreground: 280 20% 98%;
+
+    --popover: 280 40% 7%;
+    --popover-foreground: 280 20% 98%;
+
+    --primary: 283 55% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 280 30% 12%;
+    --secondary-foreground: 280 20% 98%;
+
+    --muted: 280 30% 15%;
+    --muted-foreground: 280 20% 65%;
+
+    --accent: 197 90% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 35%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 280 25% 16%;
+    --input: 280 25% 16%;
+    --ring: 283 55% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased transition-colors duration-300;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl lg:text-5xl font-extrabold font-display;
+  }
+
+  .section-subheading {
+    @apply text-base md:text-lg text-muted-foreground max-w-2xl mx-auto;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-2;
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-logo-spin {
+  animation: logo-spin 20s linear infinite;
+}
