@@ -13,6 +13,8 @@ import ContactSection from '@/components/sections/contact';
 import Footer from '@/components/footer';
 import CareerPopup from '@/components/career-popup';
 
+import AppShowcase from '@/components/sections/app-showcase';
+
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-background">
@@ -28,6 +30,7 @@ export default function Home() {
         <Advisor />
         <ReferSection />
         <Partners />
+        <AppShowcase />
         <CTASection />
         <ContactSection />
       </main>

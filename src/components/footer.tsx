@@ -50,7 +50,7 @@ const Footer = () => {
       { label: 'FAQs', href: '/about' },
       { label: 'Terms & Conditions', href: '/terms' },
       { label: 'Contact Support', href: '/#contact' },
-      { label: 'Login', href: '/login' },
+      { label: 'STEH APP', href: '/app' },
     ],
     legal: [
       { label: 'Privacy Policy', href: '#' },

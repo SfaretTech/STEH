@@ -1,0 +1,109 @@
+
+> nextn@0.1.0 build
+> next build
+
+   Γû▓ Next.js 15.3.8
+   - Environments: .env.local, .env
+
+   Creating an optimized production build ...
+ ΓÜá Compiled with warnings in 49s
+
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in 'C:\Users\LAWRENCE DIKE\Downloads\project\node_modules\@opentelemetry\sdk-node\build\src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/code-verifier.ts
+./src/app/actions.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/code-verifier.ts
+./src/app/actions.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/code-verifier.ts
+./src/app/actions.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/code-verifier.ts
+./src/app/actions.ts
+
+./node_modules/@genkit-ai/core/lib/tracing.js
+Module not found: Can't resolve '@genkit-ai/firebase' in 'C:\Users\LAWRENCE DIKE\Downloads\project\node_modules\@genkit-ai\core\lib'
+
+Import trace for requested module:
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/code-verifier.ts
+./src/app/actions.ts
+
+ Γ£ô Compiled successfully in 78s
+   Skipping validation of types
+   Skipping linting
+   Collecting page data ...
+   Generating static pages (0/17) ...
+   Generating static pages (4/17) 
+   Generating static pages (8/17) 
+   Generating static pages (12/17) 
+ Γ£ô Generating static pages (17/17)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                 Size  First Load JS
+Γöî Γùï /                                    22.3 kB         426 kB
+Γö£ Γùï /_not-found                            141 B         103 kB
+Γö£ Γùï /about                               8.53 kB         202 kB
+Γö£ Γùï /app                                  143 kB         337 kB
+Γö£ Γùï /business                            7.79 kB         209 kB
+Γö£ Γùï /courses                               230 B         404 kB
+Γö£ Γùï /login                               3.19 kB         197 kB
+Γö£ Γùï /portfolio                           2.71 kB         196 kB
+Γö£ Γùï /refer                               2.66 kB         196 kB
+Γö£ Γùï /referral-signup                     5.91 kB         199 kB
+Γö£ Γùï /register                            4.06 kB         205 kB
+Γö£ Γùï /sih                                 5.15 kB         199 kB
+Γö£ Γùï /sih/apply                           5.39 kB         183 kB
+Γöö Γùï /terms                               2.65 kB         196 kB
++ First Load JS shared by all             103 kB
+  Γö£ chunks/1684-133433017072a211.js      46.6 kB
+  Γö£ chunks/4bd1b696-f532e317cd725cab.js  53.2 kB
+  Γöö other shared chunks (total)          3.03 kB
+
+
+Γùï  (Static)  prerendered as static content
+

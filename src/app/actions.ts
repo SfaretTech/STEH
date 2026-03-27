@@ -34,9 +34,14 @@ export async function getCourseRecommendation(prevState: any, formData: FormData
       recommendation: result.recommendedCourses,
     };
   } catch (error) {
-    console.error(error);
+    console.error('Genkit Course Recommendation Error:', error);
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    const isQuotaError = errorMessage.includes('429') || errorMessage.includes('Quota');
+    
     return {
-      message: 'An unexpected error occurred. Please try again.',
+      message: isQuotaError 
+        ? 'AI limits reached. Please try again later or contact support.' 
+        : 'An unexpected error occurred while consulting the AI. Please try again.',
       errors: null,
     };
   }
@@ -46,9 +51,9 @@ export async function getCourseRecommendation(prevState: any, formData: FormData
  * General Inquiry Action
  */
 const inquirySchema = z.object({
-  name: z.string().min(2, 'Please enter your name.').optional(),
-  firstName: z.string().min(2, 'Please enter your first name.').optional(),
-  lastName: z.string().min(2, 'Please enter your last name.').optional(),
+  name: z.string().min(2, 'Please enter your name.').nullable().optional(),
+  firstName: z.string().min(2, 'Please enter your first name.').nullable().optional(),
+  lastName: z.string().min(2, 'Please enter your last name.').nullable().optional(),
   email: z.string().email('Please enter a valid email address.'),
   message: z.string().min(10, 'Please enter a message of at least 10 characters.'),
 });
@@ -81,7 +86,7 @@ export async function submitInquiry(prevState: any, formData: FormData) {
   if (!process.env.RESEND_API_KEY || process.env.RESEND_API_KEY === 'your_api_key_here') {
     console.error('Resend API key is not set.');
     return {
-        message: 'Server configuration error. Could not send email.',
+        message: 'Email service is not configured. Please contact support.',
         errors: null,
     };
   }
@@ -125,7 +130,7 @@ export async function submitInquiry(prevState: any, formData: FormData) {
   } catch (error) {
     console.error('Submit Inquiry error:', error);
     return {
-      message: 'Failed to send message.',
+      message: 'Failed to send message. Please try again or check your connection.',
       errors: null,
     };
   }
@@ -207,15 +212,15 @@ const enrollmentSchema = z.object({
   state: z.string().min(2, 'State is required'),
   stateOfOrigin: z.string().min(2, 'State of origin is required'),
   education: z.string().min(1, 'Education qualification is required'),
-  referral: z.string().optional(),
+  referral: z.string().nullable().optional(),
   nextOfKinName: z.string().min(2, 'Next of kin name is required'),
   nextOfKinPhone: z.string().min(10, 'Next of kin phone is required'),
   nextOfKinRelationship: z.string().min(2, 'Relationship is required'),
   course: z.string().min(1, 'Course is required'),
   grade: z.string().min(1, 'Grade level is required'),
   paymentOption: z.enum(['paynow', 'scholarship']),
-  selectedSkills: z.string().optional(),
-  passport: z.string().optional(), // Base64 string
+  selectedSkills: z.string().nullable().optional(),
+  passport: z.string().nullable().optional(), // Base64 string
 });
 
 export async function submitEnrollment(prevState: any, formData: FormData) {
@@ -378,9 +383,12 @@ export async function submitCodeForVerification(prevState: any, formData: FormDa
     };
   } catch (error) {
     console.error('Code verification error:', error);
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    const isQuotaError = errorMessage.includes('429') || errorMessage.includes('Quota');
+
     return {
-      message: 'Failed to verify code with AI.',
-      analysis: 'An unexpected error occurred while communicating with the AI. Please try again.',
+      message: isQuotaError ? 'AI limits reached. Please try again later.' : 'Failed to verify code with AI.',
+      analysis: isQuotaError ? 'The AI service is currently experiencing high load or has reached its quota limit.' : 'An unexpected error occurred while communicating with the AI. Please try again.',
       isCorrect: false,
     };
   }

@@ -1,0 +1,18 @@
+Testing Genkit gemini-1.5-flash...
+Caught an error in Genkit: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+    at handleResponseNotOk (C:\Users\LAWRENCE DIKE\Downloads\project\node_modules\@google\generative-ai\dist\index.js:434:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async makeRequest (C:\Users\LAWRENCE DIKE\Downloads\project\node_modules\@google\generative-ai\dist\index.js:403:9)
+    at async generateContent (C:\Users\LAWRENCE DIKE\Downloads\project\node_modules\@google\generative-ai\dist\index.js:867:22)
+    at async ChatSession.sendMessage (C:\Users\LAWRENCE DIKE\Downloads\project\node_modules\@google\generative-ai\dist\index.js:1205:9)
+    at async callGemini (C:\Users\LAWRENCE DIKE\Downloads\project\node_modules\@genkit-ai\googleai\src\gemini.ts:1367:26)
+    at async <anonymous> (C:\Users\LAWRENCE DIKE\Downloads\project\node_modules\@genkit-ai\googleai\src\gemini.ts:1426:11)
+    at async <anonymous> (C:\Users\LAWRENCE DIKE\Downloads\project\node_modules\@genkit-ai\core\src\action.ts:531:14)
+    at async <anonymous> (C:\Users\LAWRENCE DIKE\Downloads\project\node_modules\@genkit-ai\core\src\action.ts:404:30)
+    at async <anonymous> (C:\Users\LAWRENCE DIKE\Downloads\project\node_modules\@genkit-ai\core\src\tracing\instrumentation.ts:73:16) {
+  status: 404,
+  statusText: 'Not Found',
+  errorDetails: undefined,
+  traceId: 'f32139155710a34d8d994a538d0f68af',
+  ignoreFailedSpan: true
+}
